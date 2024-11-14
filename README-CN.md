@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  中文 | <a href="README.md">English</a>
+</p>
+
+<p align="center">
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-Apache%202-blue.svg" alt="License"/>
   </a>
