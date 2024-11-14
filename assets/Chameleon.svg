@@ -1,0 +1,178 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 高科技渐变 - 更鲜艳的色彩 -->
+    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00F5A0">
+        <animate attributeName="stop-color" 
+                 values="#00F5A0;#00D9F5;#00F5A0" 
+                 dur="8s" 
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#00D9F5">
+        <animate attributeName="stop-color" 
+                 values="#00D9F5;#37A3FF;#00D9F5" 
+                 dur="8s" 
+                 repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#37A3FF">
+        <animate attributeName="stop-color" 
+                 values="#37A3FF;#00F5A0;#37A3FF" 
+                 dur="8s" 
+                 repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- 增强的文字发光效果 -->
+    <filter id="enhancedGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="blur1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur2"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur3"/>
+      <feMerge>
+        <feMergeNode in="blur3"/>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 文字特效 -->
+    <filter id="textEffect">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="arithmetic" k1="1.5" k2="-0.5" k3="0" k4="0"/>
+    </filter>
+
+    <!-- 数据流动效果 -->
+    <pattern id="dataPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M0 10h20M10 0v20" stroke="rgba(255,255,255,0.1)" stroke-width="0.5">
+        <animate attributeName="stroke-dasharray" 
+                 values="0,40;40,40" 
+                 dur="3s" 
+                 repeatCount="indefinite"/>
+      </path>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="0" y="0" width="240" height="240" fill="#0A192F"/>
+  <rect x="0" y="0" width="240" height="240" fill="url(#dataPattern)" opacity="0.3"/>
+
+  <!-- Logo主体 -->
+  <g transform="translate(20,20)">
+    <!-- 外环 -->
+    <path d="
+      M 100 0
+      A 100 100 0 0 1 200 100
+      A 100 100 0 0 1 100 200
+      A 100 100 0 0 1 0 100
+      A 100 100 0 0 1 100 0
+      Z"
+      fill="none"
+      stroke="url(#techGradient)"
+      stroke-width="1.5"
+      filter="url(#enhancedGlow)">
+      <animate attributeName="stroke-dasharray" 
+               values="0,1256.6;1256.6,1256.6" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </path>
+
+    <!-- 内环 -->
+    <path d="
+      M 100 40
+      A 60 60 0 0 1 160 100
+      A 60 60 0 0 1 100 160
+      A 60 60 0 0 1 40 100
+      A 60 60 0 0 1 100 40
+      Z"
+      fill="none"
+      stroke="url(#techGradient)"
+      stroke-width="1"
+      opacity="0.6"
+      filter="url(#enhancedGlow)">
+      <animate attributeName="stroke-dasharray" 
+               values="0,754;754,754" 
+               dur="3s" 
+               begin="1s"
+               repeatCount="indefinite"/>
+    </path>
+
+    <!-- 数据节点 -->
+    <g class="data-nodes">
+      <circle cx="100" cy="0" r="3" fill="#fff" filter="url(#enhancedGlow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="200" cy="100" r="3" fill="#fff" filter="url(#enhancedGlow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="100" cy="200" r="3" fill="#fff" filter="url(#enhancedGlow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="100" r="3" fill="#fff" filter="url(#enhancedGlow)">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- 突出的中心文字 -->
+    <g transform="translate(100,100)" text-anchor="middle">
+      <text y="0" 
+            font-family="Arial, sans-serif" 
+            font-size="28" 
+            font-weight="bold" 
+            fill="url(#techGradient)" 
+            filter="url(#enhancedGlow)">
+        Chameleon
+        <animate attributeName="opacity" 
+                 values="0.9;1;0.9" 
+                 dur="3s" 
+                 repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- 数据流线 -->
+    <g class="data-flow">
+      <path d="M100 0 Q150 0 200 100" 
+            stroke="url(#techGradient)" 
+            stroke-width="0.5" 
+            fill="none" 
+            opacity="0.5">
+        <animate attributeName="stroke-dasharray" 
+                 values="0,300;300,300" 
+                 dur="2s" 
+                 repeatCount="indefinite"/>
+      </path>
+      <path d="M200 100 Q200 150 100 200" 
+            stroke="url(#techGradient)" 
+            stroke-width="0.5" 
+            fill="none" 
+            opacity="0.5">
+        <animate attributeName="stroke-dasharray" 
+                 values="0,300;300,300" 
+                 dur="2s" 
+                 begin="0.5s"
+                 repeatCount="indefinite"/>
+      </path>
+      <path d="M100 200 Q0 150 0 100" 
+            stroke="url(#techGradient)" 
+            stroke-width="0.5" 
+            fill="none" 
+            opacity="0.5">
+        <animate attributeName="stroke-dasharray" 
+                 values="0,300;300,300" 
+                 dur="2s" 
+                 begin="1s"
+                 repeatCount="indefinite"/>
+      </path>
+      <path d="M0 100 Q0 0 100 0" 
+            stroke="url(#techGradient)" 
+            stroke-width="0.5" 
+            fill="none" 
+            opacity="0.5">
+        <animate attributeName="stroke-dasharray" 
+                 values="0,300;300,300" 
+                 dur="2s" 
+                 begin="1.5s"
+                 repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+</svg>
