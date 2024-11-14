@@ -24,6 +24,26 @@
   </a>
 </p>
 
+
+## 🦎 Why Chameleon?
+
+Just as a chameleon adapts to its environment, Chameleon framework seamlessly integrates with different database environments:
+
+### Adaptive Capability
+- Like a chameleon changing its colors, Chameleon intelligently adapts to different database environments
+- Automatic detection and optimization for various database types
+- Smart configuration adjustment based on the runtime environment
+
+### Seamless Transition
+- Natural and effortless transitions, just like a chameleon's color changes
+- Transparent adaptation at the business layer
+- Zero-modification database switching
+
+### Intelligent Response
+- Smart reactions to environmental changes, mimicking a chameleon's instincts
+- Intelligent query optimization and execution
+- Adaptive performance tuning
+
 ## 🚀 Features
 
 - **Unified Interface**: Single API for multiple database operations
