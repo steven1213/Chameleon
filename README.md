@@ -44,6 +44,15 @@ Just as a chameleon adapts to its environment, Chameleon framework seamlessly in
 - Intelligent query optimization and execution
 - Adaptive performance tuning
 
+
+## 👥 Contributors
+
+<p align="center">
+  <a href="https://github.com/yourusername/chameleon/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=yourusername/chameleon" />
+  </a>
+</p>
+
 ## 🚀 Features
 
 - **Unified Interface**: Single API for multiple database operations
@@ -53,4 +62,10 @@ Just as a chameleon adapts to its environment, Chameleon framework seamlessly in
 - **Easy Integration**: Simple setup with minimal configuration
 - **Extensible**: Support for custom database adapters
 
-## 📦 Installation
+### How to Contribute
+We welcome contributions of all forms. Here's how you can help:
+- 🐛 Report bugs and issues
+- 💡 Propose new features
+- 📖 Improve documentation
+- 🔍 Review code changes
+- 💻 Submit pull requests

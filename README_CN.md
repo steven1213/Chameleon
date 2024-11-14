@@ -43,6 +43,14 @@
 - 智能的查询优化与执行
 - 自适应性能调优
 
+## 👥 贡献者
+
+<p align="center">
+  <a href="https://github.com/steven1213/Chameleon/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=steven1213/Chameleon" />
+  </a>
+</p>
+
 ## 🚀 特性
 
 - **统一接口**: 单一API适配多种数据库操作
@@ -52,4 +60,10 @@
 - **易集成**: 简单配置即可使用
 - **可扩展**: 支持自定义数据库适配器
 
-## 📦 安装
+### 如何贡献
+我们欢迎各种形式的贡献，您可以通过以下方式参与：
+- 🐛 报告问题和漏洞
+- 💡 提出新功能建议
+- 📖 改进文档
+- 🔍 审查代码
+- 💻 提交代码
