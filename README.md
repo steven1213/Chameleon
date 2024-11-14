@@ -44,15 +44,6 @@ Just as a chameleon adapts to its environment, Chameleon framework seamlessly in
 - Intelligent query optimization and execution
 - Adaptive performance tuning
 
-
-## 👥 Contributors
-
-<p align="center">
-  <a href="https://github.com/yourusername/chameleon/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=yourusername/chameleon" />
-  </a>
-</p>
-
 ## 🚀 Features
 
 - **Unified Interface**: Single API for multiple database operations
@@ -61,6 +52,15 @@ Just as a chameleon adapts to its environment, Chameleon framework seamlessly in
 - **Type Safety**: Compile-time type checking
 - **Easy Integration**: Simple setup with minimal configuration
 - **Extensible**: Support for custom database adapters
+
+
+## 👥 Contributors
+
+<p align="center">
+  <a href="https://github.com/yourusername/chameleon/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=yourusername/chameleon" />
+  </a>
+</p>
 
 ### How to Contribute
 We welcome contributions of all forms. Here's how you can help:
