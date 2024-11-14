@@ -6,7 +6,16 @@
         <artifactId>chameleon</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>org.example</groupId>
     <artifactId>chameleon-cache</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <name>chameleon-cache</name>
+    <description>chameleon-cache</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.steven</groupId>
+            <artifactId>chameleon-adapter</artifactId>
+        </dependency>
+    </dependencies>
 </project>
