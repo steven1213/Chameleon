@@ -11,6 +11,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>chameleon-adapter</name>
     <description>chameleon-adapter</description>
+    <packaging>pom</packaging>
     <url/>
     <dependencies>
         <dependency>

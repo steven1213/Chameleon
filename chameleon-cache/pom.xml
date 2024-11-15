@@ -16,6 +16,17 @@
         <dependency>
             <groupId>com.steven</groupId>
             <artifactId>chameleon-adapter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
+
+<!--    <dependepenciesManagement>-->
+<!--        <dependencies>-->
+<!--            <dependence>-->
+<!--                <groupId>com.steven</groupId>-->
+<!--                <artifactId>chameleon-adapter</artifactId>-->
+<!--            </dependence>-->
+<!--        </dependencies>-->
+<!--    </dependepenciesManagement>-->
 </project>
