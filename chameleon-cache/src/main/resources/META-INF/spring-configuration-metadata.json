@@ -1,0 +1,23 @@
+{
+  "groups": [
+    {
+      "name": "chameleon.cache",
+      "type": "com.steven.chameleon.cache.config.CacheProperties",
+      "sourceType": "com.steven.chameleon.cache.config.CacheProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "chameleon.cache.type",
+      "type": "java.lang.String",
+      "description": "Cache type (local or redis)",
+      "defaultValue": "local"
+    },
+    {
+      "name": "chameleon.cache.local.maximum-size",
+      "type": "java.lang.Integer",
+      "description": "Maximum size of local cache",
+      "defaultValue": 1000
+    }
+  ]
+}

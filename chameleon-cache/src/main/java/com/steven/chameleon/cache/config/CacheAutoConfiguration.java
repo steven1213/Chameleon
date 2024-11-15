@@ -1,5 +1,8 @@
 package com.steven.chameleon.cache.config;
 
+import com.steven.chameleon.cache.annotation.Cache;
+import com.steven.chameleon.cache.annotation.CacheEvict;
+import com.steven.chameleon.cache.annotation.CachePut;
 import com.steven.chameleon.cache.core.CacheManager;
 import com.steven.chameleon.cache.core.MemoryCacheManager;
 import com.steven.chameleon.cache.interceptor.CacheInterceptor;
@@ -15,10 +18,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.steven.chameleon.cache.annotation.Cache;
-import com.steven.chameleon.cache.annotation.CacheEvict;
-import com.steven.chameleon.cache.annotation.CachePut;
 
 /**
  * 缓存自动配置类

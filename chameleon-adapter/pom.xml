@@ -12,11 +12,25 @@
     <name>chameleon-adapter</name>
     <description>chameleon-adapter</description>
     <packaging>pom</packaging>
-    <url/>
+    <modules>
+        <module>chameleon-adapter-mysql</module>
+        <module>chameleon-adapter-oracle</module>
+        <module>chameleon-adapter-gaussdb</module>
+        <module>chameleon-adapter-postgresql</module>
+    </modules>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
     <dependencies>
         <dependency>
-            <groupId>com.steven</groupId>
-            <artifactId>chameleon-core</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 

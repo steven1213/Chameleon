@@ -4,27 +4,44 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.steven</groupId>
-        <artifactId>chameleon</artifactId>
+        <artifactId>chameleon-adapter</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>chameleon-monitor</artifactId>
+    <artifactId>chameleon-adapter-gaussdb</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>chameleon-monitor</name>
-    <description>chameleon-monitor</description>
+    <name>chameleon-adapter-gaussdb</name>
+    <description>chameleon-adapter-gaussdb</description>
     <url/>
-    <modules>
-        <module>chameleon-monitor-core</module>
-        <module>chameleon-monitor-web</module>
-    </modules>
+    <licenses>
+        <license/>
+    </licenses>
+    <developers>
+        <developer/>
+    </developers>
+    <scm>
+        <connection/>
+        <developerConnection/>
+        <tag/>
+        <url/>
+    </scm>
+    <properties>
+        <java.version>17</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>com.steven</groupId>
-            <artifactId>chameleon-cache</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
