@@ -1,13 +1,13 @@
-package com.steven.chameleon.adapter;
+package com.steven.chameleon.adapter.mysql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChameleonAdapterApplication {
+public class ChameleonAdapterMysqlApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ChameleonAdapterApplication.class, args);
+        SpringApplication.run(ChameleonAdapterMysqlApplication.class, args);
     }
 
 }
