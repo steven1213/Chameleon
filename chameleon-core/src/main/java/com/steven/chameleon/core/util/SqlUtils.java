@@ -1,6 +1,7 @@
 package com.steven.chameleon.core.util;
 
 import org.apache.commons.lang3.StringUtils;
+
 import java.util.regex.Pattern;
 
 public final class SqlUtils {

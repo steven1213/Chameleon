@@ -24,6 +24,7 @@
         <module>chameleon-test</module>
         <module>chameleon-example</module>
         <module>chameleon-adapter</module>
+        <module>chameleon-auth</module>
     </modules>
 
     <properties>

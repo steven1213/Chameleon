@@ -2,6 +2,7 @@ package com.steven.chameleon.core.web.interceptor;
 
 import com.steven.chameleon.core.util.RequestIdGenerator;
 import org.springframework.web.servlet.HandlerInterceptor;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
