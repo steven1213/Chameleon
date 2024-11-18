@@ -21,15 +21,20 @@ public final class RequestIdGenerator {
     /** 请求头中RequestId的key */
     public static final String REQUEST_ID_HEADER = "X-Request-Id";
     
-    /** 时间戳格式化器 */
+    /** 时间戳格式化器 - 17位 */
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
     
-    /** 机器标识位数 */
+    /** 机器标识位数 - 2位 */
     private static final int MACHINE_BITS = 5;
-    /** 机器标识最大值 31 */
     private static final int MAX_MACHINE_NUM = ~(-1 << MACHINE_BITS);
-    /** 机器标识，可以从配置中读取 */
     private static final int MACHINE_ID = 1;
+    
+    /** 随机数位数 - 6位 */
+    private static final int RANDOM_BITS = 6;
+    private static final int MAX_RANDOM = (int) Math.pow(10, RANDOM_BITS);  // 1_000_000
+    
+    /** ID总长度 - 25位 */
+    private static final int TOTAL_LENGTH = 25;
     
     /**
      * 从MDC获取或生成新的requestId
@@ -44,25 +49,34 @@ public final class RequestIdGenerator {
     /**
      * 生成新的requestId
      * 格式: 时间戳(17位) + 机器标识(2位) + 随机数(6位) = 25位
+     * 示例: 20240319152132123 01 123456
      *
      * @return 新生成的requestId
+     * @throws IllegalStateException 如果生成的ID长度不符合预期
      */
     public static String generate() {
-        // 1. 时间戳部分
+        // 1. 时间戳部分 (17位)
         String timestamp = LocalDateTime.now().format(FORMATTER);
         
-        // 2. 机器标识部分（确保两位数）
+        // 2. 机器标识部分（2位，补零）
         String machineId = String.format("%02d", MACHINE_ID & MAX_MACHINE_NUM);
         
-        // 3. 随机数部分
-        String random = String.format("%06d", ThreadLocalRandom.current().nextInt(1000000));
+        // 3. 随机数部分（6位，补零）
+        String random = String.format("%0" + RANDOM_BITS + "d", 
+            ThreadLocalRandom.current().nextInt(MAX_RANDOM));
         
         // 4. 组合
-        return new StringBuilder(25)
-            .append(timestamp)
-            .append(machineId)
-            .append(random)
-            .toString();
+        String requestId = timestamp + machineId + random;
+        
+        // 5. 验证长度
+        if (requestId.length() != TOTAL_LENGTH) {
+            throw new IllegalStateException(
+                String.format("Generated ID length mismatch. Expected: %d, Actual: %d", 
+                    TOTAL_LENGTH, requestId.length())
+            );
+        }
+        
+        return requestId;
     }
     
     /**
