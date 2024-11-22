@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/Chameleon.svg" alt="Chameleon Logo" width="200" height="200"/>
+  <img src="./assets/Chameleon-logo.svg" alt="Chameleon Logo" width="200" height="200"/>
 </p>
 
 <h1 align="center">Chameleon</h1>
